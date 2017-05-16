@@ -20,14 +20,14 @@
   -->
 
   <parent>
-    <groupId>io.fabric8</groupId>
+    <groupId>io.fabric8.dmp.samples</groupId>
     <artifactId>dmp-sample-parent</artifactId>
-    <version>0.20.1</version>
+    <version>0.21.0</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>docker-jolokia-demo</artifactId>
-  <version>0.20.1</version>
+  <artifactId>dmp-sample-data-jolokia</artifactId>
+  <version>0.21.0</version>
   <!-- add custom lifecycle -->
   <packaging>docker</packaging>
 
@@ -162,6 +162,8 @@
                    for deploying them. I.e. this image has a script 'deploy-and-run.sh' which exactly
                    does this. -->
                 <assembly>
+                  <name>app</name>
+                  <targetDir>/maven</targetDir>
                   <mode>tar</mode>
                   <user>www-data:www-data:www-data</user>
                   <descriptor>assembly.xml</descriptor>
